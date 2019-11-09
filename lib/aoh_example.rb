@@ -13,8 +13,8 @@ end
 def literal_aoh
   # Using Array literal syntax only, build a nested array that uses the data in
   # held in the constants
-  array = [DON_G, JOELLE_VD, PAT_M, KATE_G, BRUCE_G]
-  array[0].sort_by
+  aoh = [DON_G, JOELLE_VD, PAT_M, KATE_G, BRUCE_G]
+  sort_by_array aoh; Hash[sort_by{|k, _| aoh.index(k) || length}]
 end
 
 def aoh_lookup(aoh, row, key)
